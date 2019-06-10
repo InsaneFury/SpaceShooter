@@ -200,6 +200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyBlack4
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -365,6 +370,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyBlack4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -464,6 +474,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemyBlack4 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
@@ -639,6 +654,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemyBlack4 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}

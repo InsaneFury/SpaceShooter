@@ -11,6 +11,14 @@ public class Bullet : MonoBehaviour
         Invoke("DisableBullet", timeToDisable);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            DisableBullet();
+        }
+    }
+
     void DisableBullet()
     {
         gameObject.SetActive(false);
