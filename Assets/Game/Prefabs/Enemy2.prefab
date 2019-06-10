@@ -262,6 +262,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
+        type: 3}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
       propertyPath: blinkTime
       value: 0.1
       objectReference: {fileID: 0}
@@ -432,6 +443,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
+        type: 3}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
       propertyPath: blinkAmount
       value: 0.5
       objectReference: {fileID: 0}
@@ -535,6 +557,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
+        type: 3}
     - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: blinkAmount
@@ -715,6 +748,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
+        type: 3}
     - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: blinkAmount

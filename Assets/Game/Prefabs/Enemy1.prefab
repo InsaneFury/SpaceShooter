@@ -125,6 +125,17 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1c72ffb89d513df48a578ba0031db9be, type: 2}
     - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
         type: 3}
+      propertyPath: health
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
+        type: 3}
+      propertyPath: explosion
+      value: 
+      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
+        type: 3}
+    - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
+        type: 3}
       propertyPath: blinkTime
       value: 0.1
       objectReference: {fileID: 0}

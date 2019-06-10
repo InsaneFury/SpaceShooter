@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     [Header("Settings")]
     [Tooltip("Life")]
     public float health = 20f;
+    public GameObject explosion;
 
     [Header("BlinkSettings")]
     [Tooltip("Time in seconds")]
@@ -50,6 +51,7 @@ public class Enemy : MonoBehaviour
     {
         if (health <= 0)
         {
+            Instantiate(explosion, transform.position,explosion.transform.rotation);
             Destroy(gameObject);
         }  
     }
