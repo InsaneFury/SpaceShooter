@@ -136,6 +136,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
         type: 3}
+      propertyPath: heatHazeWave
+      value: 
+      objectReference: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
+        type: 3}
+    - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
+        type: 3}
       propertyPath: blinkTime
       value: 0.1
       objectReference: {fileID: 0}

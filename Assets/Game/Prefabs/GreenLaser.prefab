@@ -142,3 +142,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToDisable: 3
+  laserCollision: {fileID: 624691477965180129, guid: 091e64b14a1cd8e4ba8648018bde687c,
+    type: 3}
