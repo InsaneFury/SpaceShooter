@@ -53,6 +53,15 @@ public class Enemy : MonoBehaviour
             isBlinking = true;
             StartCoroutine("Blink");
         }
+
+        switch (collision.tag)
+        {
+            case "nova":
+            case "missile":
+            case "ray":
+                Die();
+                break;
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -60,7 +69,7 @@ public class Enemy : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             Die();
-        }
+        }   
     }
 
     IEnumerator Blink()

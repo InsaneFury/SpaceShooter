@@ -13,6 +13,7 @@ TagManager:
   - shield
   - epic_laser
   - double_laser
+  - nova
   layers:
   - Default
   - TransparentFX

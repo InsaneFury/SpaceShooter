@@ -20,7 +20,7 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     {
         spawner = EnemySpawner.Get();
         highScore = PlayerPrefs.GetInt("HighScore");
-        UIGameplayManager.Get().RefreshScoreUI();
+        //UIGameplayManager.Get().RefreshScoreUI();
     }
 
     void AddScoreFromEnemy(Enemy e)
@@ -29,7 +29,7 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         {
             spawner.SpawnFinalBoss();
         }
-        UIGameplayManager.Get().RefreshScoreUI();
+       // UIGameplayManager.Get().RefreshScoreUI();
     }
 
     public void AddHighScore()
@@ -38,14 +38,14 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         {
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
-            UIGameplayManager.Get().RefreshScoreUI();
+           // UIGameplayManager.Get().RefreshScoreUI();
         }   
     }
 
     public void ResetHighScore()
     {
         PlayerPrefs.SetInt("HighScore", 0);
-        UIGameplayManager.Get().RefreshScoreUI();
+       // UIGameplayManager.Get().RefreshScoreUI();
     }
 
     public void ResetScore()

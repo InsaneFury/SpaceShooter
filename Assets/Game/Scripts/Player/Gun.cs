@@ -78,6 +78,6 @@ public class Gun : MonoBehaviour
         Quaternion shootAngle = Quaternion.Euler(new Vector3(currentBullet.transform.rotation.x, currentBullet.transform.rotation.y, direction));
         currentBullet.transform.rotation = shootAngle;
         currentBullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        currentBullet.GetComponent<Rigidbody2D>().AddForce(currentBullet.transform.up * shootPower * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        currentBullet.GetComponent<Rigidbody2D>().AddForce(currentBullet.transform.up * shootPower * Time.fixedUnscaledDeltaTime, ForceMode2D.Impulse);
     }
 }

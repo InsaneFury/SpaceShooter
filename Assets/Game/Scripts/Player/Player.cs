@@ -16,8 +16,12 @@ public class Player : MonobehaviourSingleton<Player>
     public GameObject laser;
     public GameObject doubleLaser;
     public GameObject epicLaser;
+    public GameObject epicLaserText;
     public GameObject shield;
     public int energyPW = 10;
+
+    [Header("SkillsSettings")]
+    public GameObject nova;
 
     Rigidbody2D rb;
     Vector2 moveInput;
@@ -42,22 +46,22 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
-        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
+        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * speed;
 
         if (energy <= 0f)
         {
             energy = 0f;
-            StopEnergyDrain();  
-        }
+            StopEnergyDrain();
+        }  
     }
 
     private void FixedUpdate()
     {
         if (rb.velocity.magnitude < maxVelocity)
         {
-            rb.AddForce(moveVelocity * Time.fixedDeltaTime);  
-        }  
+            rb.AddForce(moveVelocity * Time.fixedDeltaTime);
+        }
     }
 
     private void LateUpdate()
@@ -118,7 +122,7 @@ public class Player : MonobehaviourSingleton<Player>
         bool downLimit = pos.y - playerSize.y < -Camera.main.orthographicSize;
         bool rightLimit = pos.x + playerSize.x > orthographicWidth;
         bool leftLimit = pos.x - playerSize.x < -orthographicWidth;
-        
+
 
         if (upLimit)
         {
@@ -148,7 +152,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     public void StartEnergyDrain()
     {
-        InvokeRepeating("LoseEnergy",0f, energyLoseRateInSeconds);
+        InvokeRepeating("LoseEnergy", 0f, energyLoseRateInSeconds);
     }
 
     public void StopEnergyDrain()
@@ -171,6 +175,7 @@ public class Player : MonobehaviourSingleton<Player>
         laser.SetActive(false);
         doubleLaser.SetActive(false);
         epicLaser.SetActive(true);
+        epicLaserText.SetActive(true);
     }
 
     public void ActiveDoubleLaser()
@@ -192,4 +197,18 @@ public class Player : MonobehaviourSingleton<Player>
         energy += energyPW;
     }
 
+    public void Nova()
+    {
+        nova.SetActive(true);
+    }
+
+    public void Missile()
+    {
+        Debug.Log("MissileLaunch");
+    }
+
+    public void Ray()
+    {
+        Debug.Log("Ray");
+    }
 }

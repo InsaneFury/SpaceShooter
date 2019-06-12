@@ -73,6 +73,6 @@ public class EnemyGun : MonoBehaviour
         GameObject currentBullet = SpawnBulletFromPool("BadLaser", transform.position, transform.rotation);
 
         currentBullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        currentBullet.GetComponent<Rigidbody2D>().AddForce(-transform.up * shootPower * Time.fixedDeltaTime, ForceMode2D.Impulse);
+        currentBullet.GetComponent<Rigidbody2D>().AddForce(-transform.up * shootPower * Time.fixedUnscaledDeltaTime, ForceMode2D.Impulse);
     }
 }
