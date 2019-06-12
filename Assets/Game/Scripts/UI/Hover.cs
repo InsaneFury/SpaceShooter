@@ -6,11 +6,13 @@ public class Hover : MonoBehaviour
 {
     SpriteRenderer sr;
     Player player;
+    UIGameplayManager ugManager;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
         player = Player.Get();
+        ugManager = UIGameplayManager.Get();
     }
 
     private void OnMouseOver()
@@ -18,8 +20,10 @@ public class Hover : MonoBehaviour
         sr.color = new Color(1f, 1f, 1f, .4f);
     }
 
-    private void OnMouseUp()
+    private void OnMouseDown()
     {
+        ugManager.disableBulletTime();
+        player.Nova();
         string tag = gameObject.tag;
 
         switch (tag)

@@ -15,7 +15,7 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
     Player player;
     ScoreManager sManager;
 
-    bool isBulletTimeOn = false;
+    public bool isBulletTimeOn = false;
 
     public override void Awake()
     {
@@ -67,5 +67,14 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
             blurBG.SetActive(false);
             blurMenu.SetActive(false);
         }
+    }
+
+    public void disableBulletTime()
+    {
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02F * Time.timeScale;
+        isBulletTimeOn = false;
+        blurBG.SetActive(false);
+        blurMenu.SetActive(false);
     }
 }
