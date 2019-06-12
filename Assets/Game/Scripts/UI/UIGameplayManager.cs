@@ -20,8 +20,8 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
 
     void Start()
     {
-        player = Player.Get();
-        
+        sManager = ScoreManager.Get();
+        player = Player.Get();    
     }
 
     void Update()

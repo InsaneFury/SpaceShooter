@@ -9,8 +9,6 @@ public class Star : MonoBehaviour
     public float minSpeed;
     public float maxSpeed;
     public float timeToBePicked = 0.4f;
-    public float secondsToPick = 50f;
-    float timer = 0f;
     float screenRatio;
     float orthographicWidth;
 

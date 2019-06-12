@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Player : MonobehaviourSingleton<Player>
 {
+    [Header("PlayerSettings")]
     public float speed = 10f;
     public float maxVelocity = 100f;
     public float energy = 100f;
     public float energyLoseRateInSeconds = 1f;
     public float energyLoseAmount = 0.01f;
     public float takeDMG = 2f;
+
+    [Header("PowerUpSettings")]
+    public GameObject laser;
+    public GameObject doubleLaser;
+    public GameObject epicLaser;
+    public GameObject shield;
+    public int energyPW = 10;
 
     Rigidbody2D rb;
     Vector2 moveInput;
@@ -65,6 +73,26 @@ public class Player : MonobehaviourSingleton<Player>
             {
                 TakeDamage();
             }
+        }
+
+        switch (collision.tag)
+        {
+            case "shield":
+                ActiveShield();
+                Destroy(collision.gameObject);
+                break;
+            case "epic_laser":
+                ActiveEpicLaser();
+                Destroy(collision.gameObject);
+                break;
+            case "double_laser":
+                ActiveDoubleLaser();
+                Destroy(collision.gameObject);
+                break;
+            case "energy":
+                AddEnergy();
+                Destroy(collision.gameObject);
+                break;
         }
     }
 
@@ -132,4 +160,36 @@ public class Player : MonobehaviourSingleton<Player>
     {
         energy -= takeDMG;
     }
+
+    public void ActiveShield()
+    {
+        shield.SetActive(true);
+    }
+
+    public void ActiveEpicLaser()
+    {
+        laser.SetActive(false);
+        doubleLaser.SetActive(false);
+        epicLaser.SetActive(true);
+    }
+
+    public void ActiveDoubleLaser()
+    {
+        laser.SetActive(false);
+        doubleLaser.SetActive(true);
+        epicLaser.SetActive(false);
+    }
+
+    public void ActiveSimpleLaser()
+    {
+        laser.SetActive(true);
+        doubleLaser.SetActive(false);
+        epicLaser.SetActive(false);
+    }
+
+    public void AddEnergy()
+    {
+        energy += energyPW;
+    }
+
 }

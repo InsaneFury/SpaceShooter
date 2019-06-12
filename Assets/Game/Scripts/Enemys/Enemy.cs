@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     public int minStarsDrop = 5;
     public int maxStarsDrop = 20;
     public Vector2 dispersionForce;
+    public float rateOfPowerUpsDrop = 0.10f;
 
     CameraShakeInstance shaker;
 
@@ -93,5 +94,14 @@ public class Enemy : MonoBehaviour
             Vector2 randForceDir = new Vector2(Random.Range(dispersionForce.x, dispersionForce.y), Random.Range(dispersionForce.x, dispersionForce.y));
             go.GetComponent<Rigidbody2D>().AddForce(randForceDir, ForceMode2D.Impulse);
         }
+
+        float chanceToDropPW = Random.Range(0f, 1f);
+
+        if (chanceToDropPW > rateOfPowerUpsDrop)
+        {
+            int pwToDrop = (int)Random.Range(0f, powerUps.Count);
+            Instantiate(powerUps[pwToDrop], transform.position, Quaternion.identity);
+        }
+
     }
 }

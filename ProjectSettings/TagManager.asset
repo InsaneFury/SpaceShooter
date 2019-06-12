@@ -9,6 +9,10 @@ TagManager:
   - Enemy
   - BadLaser
   - StarCollector
+  - energy
+  - shield
+  - epic_laser
+  - double_laser
   layers:
   - Default
   - TransparentFX
