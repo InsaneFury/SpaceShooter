@@ -7,6 +7,8 @@ TagManager:
   - Laser
   - Point
   - Enemy
+  - BadLaser
+  - StarCollector
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,7 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
+  - loot
   - 
   - 
   - 

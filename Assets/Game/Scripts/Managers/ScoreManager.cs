@@ -8,6 +8,8 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     public int score = 0;
     public int highScore = 0;
 
+    EnemySpawner spawner;
+
     public override void Awake()
     {
         base.Awake();
@@ -16,13 +18,17 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
 
     void Start()
     {
+        spawner = EnemySpawner.Get();
         highScore = PlayerPrefs.GetInt("HighScore");
         UIGameplayManager.Get().RefreshScoreUI();
     }
 
     void AddScoreFromEnemy(Enemy e)
     {
-        //score += e.score;
+        if (score == spawner.scoreToBossSpawn)
+        {
+            spawner.SpawnFinalBoss();
+        }
         UIGameplayManager.Get().RefreshScoreUI();
     }
 

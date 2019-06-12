@@ -57,7 +57,7 @@ PrefabInstance:
     - target: {fileID: 2340905917884338534, guid: c038008c8936c78468565173678d166d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.742
+      value: 1.982
       objectReference: {fileID: 0}
     - target: {fileID: 2340905917884338534, guid: c038008c8936c78468565173678d166d,
         type: 3}
@@ -148,6 +148,30 @@ PrefabInstance:
     - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
         type: 3}
       propertyPath: blinkAmount
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
+        type: 3}
+      propertyPath: star
+      value: 
+      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
+        type: 3}
+    - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
+        type: 3}
+      propertyPath: dispersionForce.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2332716383247575616, guid: c038008c8936c78468565173678d166d,
+        type: 3}
+      propertyPath: dispersionForce.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 961421824, guid: c038008c8936c78468565173678d166d, type: 3}
+      propertyPath: shootPower
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 961421824, guid: c038008c8936c78468565173678d166d, type: 3}
+      propertyPath: fireRate
       value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []

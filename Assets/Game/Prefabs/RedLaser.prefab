@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 895277215499522976}
   - component: {fileID: 895277215499522983}
   - component: {fileID: 895277215499522982}
-  - component: {fileID: 1056521554201433657}
+  - component: {fileID: 382612446609279963}
   m_Layer: 0
   m_Name: RedLaser
-  m_TagString: Untagged
+  m_TagString: BadLaser
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,7 +129,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1056521554201433657
+--- !u!114 &382612446609279963
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -138,9 +138,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 895277215499522981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68345b35a4a6052438d6a48773d5dcc9, type: 3}
+  m_Script: {fileID: 11500000, guid: 8eb1dc8f893728a4c9e1da702e25c265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToDisable: 3
-  laserCollision: {fileID: 624691477965180129, guid: 091e64b14a1cd8e4ba8648018bde687c,
-    type: 3}

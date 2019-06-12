@@ -53,12 +53,12 @@ PrefabInstance:
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.372
+      value: -0.661
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.869
+      value: 0.967
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
@@ -128,12 +128,12 @@ PrefabInstance:
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.372
+      value: -0.6610001
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.869
+      value: 0.967
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
@@ -208,12 +208,12 @@ PrefabInstance:
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.357
+      value: -0.6460001
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.827
+      value: 1.9250001
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
@@ -287,11 +287,37 @@ PrefabInstance:
       propertyPath: blinkAmount
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: star
+      value: 
+      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
+        type: 3}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
       value: 
       objectReference: {fileID: 3166889789586316716}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: shootPower
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
 --- !u!4 &4901441527483915193 stripped
@@ -315,12 +341,12 @@ PrefabInstance:
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.372
+      value: -0.6610001
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.869
+      value: 0.967
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
@@ -395,12 +421,12 @@ PrefabInstance:
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.357
+      value: -0.6460001
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.495
+      value: 2.593
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
@@ -469,6 +495,22 @@ PrefabInstance:
       propertyPath: blinkAmount
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: star
+      value: 
+      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
+        type: 3}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
@@ -488,6 +530,16 @@ PrefabInstance:
         type: 3}
       propertyPath: squadMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: shootPower
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
@@ -517,12 +569,12 @@ PrefabInstance:
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.357
+      value: -0.6460001
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.274
+      value: 2.372
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
@@ -591,6 +643,22 @@ PrefabInstance:
       propertyPath: blinkAmount
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: star
+      value: 
+      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
+        type: 3}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
@@ -610,6 +678,16 @@ PrefabInstance:
         type: 3}
       propertyPath: squadMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: shootPower
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
@@ -634,12 +712,12 @@ PrefabInstance:
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.372
+      value: -0.6610001
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.869
+      value: 0.967
       objectReference: {fileID: 0}
     - target: {fileID: 8067748369433758872, guid: 280c5dd538129c54b95dd46ef11edb12,
         type: 3}
@@ -714,12 +792,12 @@ PrefabInstance:
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.357
+      value: -0.6460001
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.053
+      value: 2.151
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
@@ -788,6 +866,22 @@ PrefabInstance:
       propertyPath: blinkAmount
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: star
+      value: 
+      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
+        type: 3}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.x
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: dispersionForce.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
@@ -807,6 +901,16 @@ PrefabInstance:
         type: 3}
       propertyPath: squadMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: shootPower
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
+        type: 3}
+      propertyPath: fireRate
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
