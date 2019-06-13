@@ -1,8 +1,10 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class UILoadingScreen : MonobehaviourSingleton<UILoadingScreen>
 {
     public Text loadingText;
+    public Image loadingBar;
 
     public override void Awake()
     {
@@ -16,9 +18,25 @@ public class UILoadingScreen : MonobehaviourSingleton<UILoadingScreen>
 
     public void Update()
     {
-        int loadingVal = (int) (LoaderManager.Get().loadingProgress*100);
+        TextLoader();
+        BarLoader();
+    }
+
+    void TextLoader()
+    {
+        int loadingVal = (int)(LoaderManager.Get().loadingProgress * 100);
         loadingText.text = loadingVal.ToString() + "%";
         if (LoaderManager.Get().loadingProgress >= 1)
             SetVisible(false);
     }
+
+    void BarLoader()
+    {
+        int loadingVal = (int)(LoaderManager.Get().loadingProgress * 100);
+        Debug.Log(loadingVal * 0.01);
+        loadingBar.fillAmount = (loadingVal*0.01f);
+        if (LoaderManager.Get().loadingProgress >= 1)
+            SetVisible(false);
+    }
+
 }
