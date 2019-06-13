@@ -357,6 +357,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 114888410}
+  - component: {fileID: 114888411}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -378,6 +379,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114888411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114888409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9bc04fcb2ad8048b716ec684b62287, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: main
+    clip: {fileID: 8300000, guid: c9ad19dd64fc4344bb112b61c5cb77fb, type: 3}
+    volume: 0.23
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: enemyLaser
+    clip: {fileID: 8300000, guid: 8d8e56f623e9a8341b6c2ecd760ecee6, type: 3}
+    volume: 0.54
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: playerLaser
+    clip: {fileID: 8300000, guid: 505edffffe82dbd4b94d34caecb6bbdb, type: 3}
+    volume: 0.51
+    volumeVariance: 0
+    pitch: 3
+    pitchVariance: 0.54
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  nameOfMainSong: main
 --- !u!1 &129529445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1303,7 @@ MonoBehaviour:
   energyBar: {fileID: 1902119977}
   blurBG: {fileID: 516020838}
   blurMenu: {fileID: 1521064980}
+  isBulletTimeOn: 0
 --- !u!4 &488020360
 Transform:
   m_ObjectHideFlags: 0
@@ -4767,6 +4811,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 44.931484
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: a7c06eac2eb10d54694d0c675c913bde, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ace3bf3597ade754283a3689e89a0d75, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7c06eac2eb10d54694d0c675c913bde, type: 3}
 --- !u!1 &1989397803 stripped

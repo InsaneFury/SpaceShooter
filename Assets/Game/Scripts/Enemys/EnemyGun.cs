@@ -20,6 +20,8 @@ public class EnemyGun : MonoBehaviour
 
     float timeToFire = 0f;
 
+    AudioManager aManager;
+
     private void Awake()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
@@ -40,6 +42,7 @@ public class EnemyGun : MonoBehaviour
 
             poolDictionary.Add(pool.tag, objectPool);
         }
+        aManager = AudioManager.Get();
     }
 
     void FixedUpdate()
@@ -70,6 +73,7 @@ public class EnemyGun : MonoBehaviour
     }
     public void Shoot()
     {
+        aManager.Play("enemyLaser");
         GameObject currentBullet = SpawnBulletFromPool("BadLaser", transform.position, transform.rotation);
 
         currentBullet.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

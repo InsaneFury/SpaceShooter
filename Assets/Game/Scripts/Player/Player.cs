@@ -42,6 +42,7 @@ public class Player : MonobehaviourSingleton<Player>
         moveVelocity = Vector2.zero;
         rb = GetComponent<Rigidbody2D>();
         StartEnergyDrain();
+        
     }
 
     void Update()

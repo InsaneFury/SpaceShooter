@@ -21,6 +21,8 @@ public class Gun : MonoBehaviour
 
     float timeToFire = 0f;
 
+    AudioManager aManager;
+
     private void Awake()
     {
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
@@ -41,6 +43,7 @@ public class Gun : MonoBehaviour
 
             poolDictionary.Add(pool.tag, objectPool);
         }
+        aManager = AudioManager.Get();
     }
 
     void FixedUpdate()
@@ -71,6 +74,7 @@ public class Gun : MonoBehaviour
     }
     public void Shoot()
     {
+        aManager.Play("enemyLaser");
         float direction = Random.Range(shootAngleRange[0], shootAngleRange[1]);
 
         GameObject currentBullet = SpawnBulletFromPool("Bullet", transform.position, Quaternion.identity);
