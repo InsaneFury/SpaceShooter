@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Hover : MonoBehaviour
 {
-    SpriteRenderer sr;
+    [Header("Settings")]
+    public SpriteRenderer sr;
+    public bool isEnabled = false;
     Player player;
     UIGameplayManager ugManager;
 
     private void Start()
     {
-        sr = GetComponent<SpriteRenderer>();
         player = Player.Get();
         ugManager = UIGameplayManager.Get();
     }
@@ -43,6 +44,8 @@ public class Hover : MonoBehaviour
     private void OnMouseExit()
     {
         sr.color = new Color(1f, 1f, 1f, 0f);
-        
+
+
+
     }
 }

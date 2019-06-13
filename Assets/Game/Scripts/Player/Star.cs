@@ -6,11 +6,13 @@ public class Star : MonoBehaviour
 {
     [Header("StarSettings")]
     public Transform target;
+    public AnimationCurve curveSpeed;
     public float minSpeed;
     public float maxSpeed;
     public float timeToBePicked = 0.4f;
     float screenRatio;
     float orthographicWidth;
+    float animSpeed = 0f;
 
     float speed;
     bool isFollowing = false;
@@ -58,7 +60,8 @@ public class Star : MonoBehaviour
     public void Move()
     {
         speed = Random.Range(minSpeed, maxSpeed);
-        transform.position = Vector2.SmoothDamp(transform.position, target.position, ref velocity, Time.deltaTime);
+        animSpeed += Time.fixedDeltaTime;
+        transform.position = Vector2.Lerp(transform.position, target.position, curveSpeed.Evaluate(animSpeed * speed));
     }
 
     public void Disable()

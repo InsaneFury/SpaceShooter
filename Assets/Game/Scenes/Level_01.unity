@@ -170,8 +170,6 @@ GameObject:
   m_Component:
   - component: {fileID: 52407851}
   - component: {fileID: 52407852}
-  - component: {fileID: 52407853}
-  - component: {fileID: 52407854}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -241,34 +239,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &52407853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52407850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901977a6a066bcd42b07c0e9400e6fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &52407854
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 52407850}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.000000029802322, y: 0.000000074505806}
-  serializedVersion: 2
-  m_Radius: 1.4600002
 --- !u!1 &101432290
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,7 +308,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 501
   m_Sprite: {fileID: 21300000, guid: 3bc5f1da64023844cb22b4364ed97074, type: 3}
-  m_Color: {r: 0.7877358, g: 1, b: 0.9936346, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.027940273, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1119,7 +1089,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 501
   m_Sprite: {fileID: 21300000, guid: 08cf2ef1c3d3079478c72cf9ad2e3fee, type: 3}
-  m_Color: {r: 0.7877358, g: 1, b: 0.9936346, a: 1}
+  m_Color: {r: 1, g: 0.09377971, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1407,6 +1377,8 @@ GameObject:
   m_Component:
   - component: {fileID: 519393478}
   - component: {fileID: 519393479}
+  - component: {fileID: 519393481}
+  - component: {fileID: 519393480}
   m_Layer: 5
   m_Name: s2Circle
   m_TagString: Untagged
@@ -1478,6 +1450,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &519393480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519393477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901977a6a066bcd42b07c0e9400e6fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 52407852}
+  isEnabled: 1
+--- !u!58 &519393481
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519393477}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000000029802322, y: 0.00000025331974}
+  serializedVersion: 2
+  m_Radius: 1.4600002
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,8 +1650,6 @@ GameObject:
   m_Component:
   - component: {fileID: 600031979}
   - component: {fileID: 600031980}
-  - component: {fileID: 600031981}
-  - component: {fileID: 600031982}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -1719,34 +1719,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &600031981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600031978}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901977a6a066bcd42b07c0e9400e6fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &600031982
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600031978}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00000035762787}
-  serializedVersion: 2
-  m_Radius: 1.4600002
 --- !u!1 &648851291
 GameObject:
   m_ObjectHideFlags: 0
@@ -2747,6 +2719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1144579054}
   - component: {fileID: 1144579055}
+  - component: {fileID: 1144579056}
   m_Layer: 5
   m_Name: s1Circle
   m_TagString: Untagged
@@ -2818,6 +2791,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1144579056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144579053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901977a6a066bcd42b07c0e9400e6fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 600031980}
+  isEnabled: 0
 --- !u!1 &1147166131
 GameObject:
   m_ObjectHideFlags: 0
@@ -3372,8 +3359,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1471950236}
   - component: {fileID: 1471950237}
-  - component: {fileID: 1471950238}
-  - component: {fileID: 1471950239}
   m_Layer: 5
   m_Name: Fill
   m_TagString: Untagged
@@ -3443,34 +3428,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1471950238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471950235}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901977a6a066bcd42b07c0e9400e6fab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!58 &1471950239
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471950235}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: -0.00000023841858}
-  serializedVersion: 2
-  m_Radius: 1.4600002
 --- !u!1 &1489379762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3560,6 +3517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1492397836}
   - component: {fileID: 1492397837}
+  - component: {fileID: 1492397838}
   m_Layer: 5
   m_Name: s3Circle
   m_TagString: Untagged
@@ -3631,6 +3589,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1492397838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1492397835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 901977a6a066bcd42b07c0e9400e6fab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 1471950237}
+  isEnabled: 0
 --- !u!1 &1496890573
 GameObject:
   m_ObjectHideFlags: 0
@@ -3915,7 +3887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1521064981
 Transform:
   m_ObjectHideFlags: 0
