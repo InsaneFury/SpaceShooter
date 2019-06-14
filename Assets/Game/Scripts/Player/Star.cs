@@ -20,8 +20,11 @@ public class Star : MonoBehaviour
 
     Vector2 velocity = Vector2.zero;
 
+    ScoreManager sManager;
+
     private void Awake()
     {
+        sManager = ScoreManager.Get();
         screenRatio = (float)Screen.width / (float)Screen.height;
         orthographicWidth = screenRatio * Camera.main.orthographicSize;
     }
@@ -66,6 +69,11 @@ public class Star : MonoBehaviour
 
     public void Disable()
     {
+        if (!IsOutOfRange())
+        {
+            sManager.AddStars();
+        }
+        
         Destroy(gameObject);
     }
 

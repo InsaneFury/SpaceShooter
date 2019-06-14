@@ -7,8 +7,10 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     [Header("ScoreSettings")]
     public int score = 0;
     public int highScore = 0;
+    public int stars = 0;
 
     EnemySpawner spawner;
+    UIGameplayManager UIManager;
 
     public override void Awake()
     {
@@ -18,18 +20,25 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
 
     void Start()
     {
+        Enemy.OnEnemyDie += AddScore;
         spawner = EnemySpawner.Get();
         highScore = PlayerPrefs.GetInt("HighScore");
-        //UIGameplayManager.Get().RefreshScoreUI();
+        UIManager = UIGameplayManager.Get();
+        UIManager.RefreshScoreUI();
     }
 
-    void AddScoreFromEnemy(Enemy e)
+    void AddScore(IScoreable s)
     {
+        score += s.score;
+
+        if (score > highScore)
+            AddHighScore();
+
         if (score == spawner.scoreToBossSpawn)
         {
             spawner.SpawnFinalBoss();
         }
-       // UIGameplayManager.Get().RefreshScoreUI();
+        UIManager.RefreshScoreUI();
     }
 
     public void AddHighScore()
@@ -38,14 +47,20 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         {
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
-           // UIGameplayManager.Get().RefreshScoreUI();
+            UIManager.RefreshScoreUI();
         }   
+    }
+
+    public void AddStars()
+    {
+        stars++;
+        UIManager.RefreshScoreUI();
     }
 
     public void ResetHighScore()
     {
         PlayerPrefs.SetInt("HighScore", 0);
-       // UIGameplayManager.Get().RefreshScoreUI();
+        UIManager.RefreshScoreUI();
     }
 
     public void ResetScore()

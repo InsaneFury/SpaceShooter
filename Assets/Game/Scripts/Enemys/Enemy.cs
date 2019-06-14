@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using EZCameraShake;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour,IScoreable
 {
     [Header("Settings")]
     [Tooltip("Life")]
@@ -31,14 +31,23 @@ public class Enemy : MonoBehaviour
     public Vector2 dispersionForce;
     public float rateOfPowerUpsDrop = 0.10f;
 
+    public int score{get;set;}
+
     CameraShakeInstance shaker;
+    AudioManager aManager;
 
     Material mat;
     bool isBlinking = false;
 
+    public delegate void OnEnemyAction(IScoreable s);
+    public static event OnEnemyAction OnEnemyDie;
+
     void Start()
     {
+        OnEnemyDie += Die;
         mat = GetComponent<SpriteRenderer>().material;
+        aManager = AudioManager.Get();
+        score = (int)Random.Range(100f, 1000f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,7 +56,7 @@ public class Enemy : MonoBehaviour
         {
             if (health <= 0)
             {
-                Die();
+                DieAction();
             }
             TakeDamage();
             isBlinking = true;
@@ -59,7 +68,7 @@ public class Enemy : MonoBehaviour
             case "nova":
             case "missile":
             case "ray":
-                Die();
+                DieAction();
                 break;
         }
     }
@@ -68,7 +77,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            Die();
+            DieAction();
         }   
     }
 
@@ -85,12 +94,22 @@ public class Enemy : MonoBehaviour
         health--;
     }
 
-    void Die()
+    void DieAction()
+    {
+        if (OnEnemyDie != null)
+        {
+            OnEnemyDie(this);
+        }
+    }
+
+    void Die(IScoreable s)
     {
         Instantiate(explosion, transform.position, explosion.transform.rotation);
         Instantiate(heatHazeWave, transform.position, heatHazeWave.transform.rotation);
         DropLoot();
+        aManager.Play("explosion");
         CameraShaker.Instance.ShakeOnce(4f, 4f, 0.10f, 2f);
+        OnEnemyDie -= Die;
         Destroy(gameObject);
     }
 
@@ -110,6 +129,7 @@ public class Enemy : MonoBehaviour
         {
             int pwToDrop = (int)Random.Range(0f, powerUps.Count);
             Instantiate(powerUps[pwToDrop], transform.position, Quaternion.identity);
+            Instantiate(powerUps[1], transform.position, Quaternion.identity);
         }
 
     }

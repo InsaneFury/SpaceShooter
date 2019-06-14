@@ -8,6 +8,7 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
 {
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
+    public TextMeshProUGUI stars;
     public GameObject energyBar;
     public GameObject blurBG;
     public GameObject blurMenu;
@@ -34,11 +35,12 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
         BulletTimeMenu();
     }
 
-    //public void RefreshScoreUI()
-    //{
-    //    scoreText.text = sManager.score.ToString();
-    //    highScoreText.text = sManager.highScore.ToString();
-    //}
+    public void RefreshScoreUI()
+    {
+        scoreText.text = sManager.score.ToString();
+        highScoreText.text = sManager.highScore.ToString();
+        stars.text = sManager.stars.ToString();
+    }
 
 
     void RefreshBar()
