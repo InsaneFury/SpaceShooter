@@ -118,6 +118,10 @@ PrefabInstance:
       propertyPath: point
       value: 
       objectReference: {fileID: 5395593570693230964}
+    - target: {fileID: 217898622, guid: c038008c8936c78468565173678d166d, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2340905917884338535, guid: c038008c8936c78468565173678d166d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

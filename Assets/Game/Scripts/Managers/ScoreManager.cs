@@ -26,9 +26,9 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         UIManager.RefreshScoreUI();
     }
 
-    public void AddScore(int s)
+    public void AddScore(IScoreable e)
     {
-        score += s;
+        score += e.score;
 
         if (score > highScore)
             AddHighScore();

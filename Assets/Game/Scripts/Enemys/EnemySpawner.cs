@@ -9,6 +9,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
     public float maxSpawnRateInSeconds = 20f;
     public float IncreaseDifficultyEvery = 40f;
     public int scoreToBossSpawn = 20000;
+    ScoreManager sManager;
 
     public override void Awake()
     {
@@ -17,6 +18,7 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
     void Start()
     {
+        sManager = ScoreManager.Get();
         StartSpawning();
     }
 
@@ -29,7 +31,8 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
 
         int randEnemy = (int)Random.Range(0f, enemysGO.Count);
 
-        Instantiate(enemysGO[randEnemy], RandPos, Quaternion.identity);
+        GameObject go = Instantiate(enemysGO[randEnemy], RandPos, Quaternion.identity);
+        go.GetComponentInChildren<Enemy>().OnEnemyDie += sManager.AddScore;
     }
 
     void IncreaseSpawnRate()

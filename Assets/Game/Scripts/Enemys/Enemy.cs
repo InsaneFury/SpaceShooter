@@ -33,17 +33,17 @@ public class Enemy : MonoBehaviour,IScoreable
 
     public int score{get;set;}
 
+    public delegate void OnEnemyAction(IScoreable enemy);
+    public OnEnemyAction OnEnemyDie;
+
     CameraShakeInstance shaker;
     AudioManager aManager;
-
-    ScoreManager sManager;
 
     Material mat;
     bool isBlinking = false;
 
     void Start()
     {
-        sManager = ScoreManager.Get();
         mat = GetComponent<SpriteRenderer>().material;
         aManager = AudioManager.Get();
         score = (int)Random.Range(100f, 1000f);
@@ -94,15 +94,23 @@ public class Enemy : MonoBehaviour,IScoreable
         health--;
     }
 
+    void DieAction()
+    {
+        if (OnEnemyDie != null)
+        {
+            OnEnemyDie(this);
+        }
+    }
+
     void Die()
     {
+        DieAction();
         Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
         Instantiate(heatHazeWave, gameObject.transform.position, heatHazeWave.transform.rotation);
         DropLoot();
         aManager.Play("explosion");
         CameraShaker.Instance.ShakeOnce(4f, 4f, 0.10f, 2f);
         UIPopTextController.CreatePopText(score.ToString(), gameObject.transform);
-        sManager.AddScore(score);
         Destroy(gameObject);
     }
 
@@ -111,8 +119,12 @@ public class Enemy : MonoBehaviour,IScoreable
         int randDrop = (int)Random.Range(minStarsDrop, maxStarsDrop);
         for (int i = 0; i < randDrop; i++)
         {
+            float randForceX = Random.Range(dispersionForce.x, dispersionForce.y);
+            float randForceY = Random.Range(dispersionForce.x, dispersionForce.y);
+
             GameObject go = Instantiate(star, gameObject.transform.position, Quaternion.identity);
-            Vector2 randForceDir = new Vector2(Random.Range(dispersionForce.x, dispersionForce.y), Random.Range(dispersionForce.x, dispersionForce.y));
+
+            Vector2 randForceDir = new Vector2(randForceX,randForceY);
             go.GetComponent<Rigidbody2D>().AddForce(randForceDir, ForceMode2D.Impulse);
         }
 
