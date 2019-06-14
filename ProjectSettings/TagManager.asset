@@ -14,6 +14,7 @@ TagManager:
   - epic_laser
   - double_laser
   - nova
+  - Canvas
   layers:
   - Default
   - TransparentFX

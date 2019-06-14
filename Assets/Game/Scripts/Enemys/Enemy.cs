@@ -36,18 +36,18 @@ public class Enemy : MonoBehaviour,IScoreable
     CameraShakeInstance shaker;
     AudioManager aManager;
 
+    ScoreManager sManager;
+
     Material mat;
     bool isBlinking = false;
 
-    public delegate void OnEnemyAction(IScoreable s);
-    public static event OnEnemyAction OnEnemyDie;
-
     void Start()
     {
-        OnEnemyDie += Die;
+        sManager = ScoreManager.Get();
         mat = GetComponent<SpriteRenderer>().material;
         aManager = AudioManager.Get();
         score = (int)Random.Range(100f, 1000f);
+        UIPopTextController.Initialize();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -56,7 +56,7 @@ public class Enemy : MonoBehaviour,IScoreable
         {
             if (health <= 0)
             {
-                DieAction();
+                Die();
             }
             TakeDamage();
             isBlinking = true;
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour,IScoreable
             case "nova":
             case "missile":
             case "ray":
-                DieAction();
+                Die();
                 break;
         }
     }
@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour,IScoreable
     {
         if (collision.collider.CompareTag("Player"))
         {
-            DieAction();
+            Die();
         }   
     }
 
@@ -94,22 +94,15 @@ public class Enemy : MonoBehaviour,IScoreable
         health--;
     }
 
-    void DieAction()
+    void Die()
     {
-        if (OnEnemyDie != null)
-        {
-            OnEnemyDie(this);
-        }
-    }
-
-    void Die(IScoreable s)
-    {
-        Instantiate(explosion, transform.position, explosion.transform.rotation);
-        Instantiate(heatHazeWave, transform.position, heatHazeWave.transform.rotation);
+        Instantiate(explosion, gameObject.transform.position, explosion.transform.rotation);
+        Instantiate(heatHazeWave, gameObject.transform.position, heatHazeWave.transform.rotation);
         DropLoot();
         aManager.Play("explosion");
         CameraShaker.Instance.ShakeOnce(4f, 4f, 0.10f, 2f);
-        OnEnemyDie -= Die;
+        UIPopTextController.CreatePopText(score.ToString(), gameObject.transform);
+        sManager.AddScore(score);
         Destroy(gameObject);
     }
 
@@ -118,7 +111,7 @@ public class Enemy : MonoBehaviour,IScoreable
         int randDrop = (int)Random.Range(minStarsDrop, maxStarsDrop);
         for (int i = 0; i < randDrop; i++)
         {
-            GameObject go = Instantiate(star, transform.position, Quaternion.identity);
+            GameObject go = Instantiate(star, gameObject.transform.position, Quaternion.identity);
             Vector2 randForceDir = new Vector2(Random.Range(dispersionForce.x, dispersionForce.y), Random.Range(dispersionForce.x, dispersionForce.y));
             go.GetComponent<Rigidbody2D>().AddForce(randForceDir, ForceMode2D.Impulse);
         }
@@ -128,8 +121,11 @@ public class Enemy : MonoBehaviour,IScoreable
         if (chanceToDropPW > rateOfPowerUpsDrop)
         {
             int pwToDrop = (int)Random.Range(0f, powerUps.Count);
-            Instantiate(powerUps[pwToDrop], transform.position, Quaternion.identity);
-            Instantiate(powerUps[1], transform.position, Quaternion.identity);
+            Instantiate(powerUps[pwToDrop], gameObject.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Instantiate(powerUps[1], gameObject.transform.position, Quaternion.identity);
         }
 
     }

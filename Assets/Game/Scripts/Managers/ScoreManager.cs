@@ -20,16 +20,15 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
 
     void Start()
     {
-        Enemy.OnEnemyDie += AddScore;
         spawner = EnemySpawner.Get();
         highScore = PlayerPrefs.GetInt("HighScore");
         UIManager = UIGameplayManager.Get();
         UIManager.RefreshScoreUI();
     }
 
-    void AddScore(IScoreable s)
+    public void AddScore(int s)
     {
-        score += s.score;
+        score += s;
 
         if (score > highScore)
             AddHighScore();

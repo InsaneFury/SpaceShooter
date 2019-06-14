@@ -2179,8 +2179,8 @@ MonoBehaviour:
   - {fileID: 4901441528293769331, guid: ef01a6c8b8c7f554c9336989121c4e2a, type: 3}
   - {fileID: 1722279439077059662, guid: 03a0e30475d4a6e46bd76468a1b5f8dc, type: 3}
   boss: {fileID: 0}
-  maxSpawnRateInSeconds: 10
-  IncreaseDifficultyEvery: 20
+  maxSpawnRateInSeconds: 5
+  IncreaseDifficultyEvery: 10
   scoreToBossSpawn: 20000
 --- !u!4 &746798296
 Transform:
@@ -2761,7 +2761,7 @@ GameObject:
   - component: {fileID: 1090050193}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4340,7 +4340,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 80
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1e10bd569cccbbd47b0bcba3c0a67767, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4559,7 +4559,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!60 &1690687313
 PolygonCollider2D:
