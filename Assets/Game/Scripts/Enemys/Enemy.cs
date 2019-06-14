@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour,IScoreable
     public int score{get;set;}
 
     public delegate void OnEnemyAction(IScoreable enemy);
-    public OnEnemyAction OnEnemyDie;
+    public event OnEnemyAction OnEnemyDie;
 
     CameraShakeInstance shaker;
     AudioManager aManager;
@@ -124,6 +124,7 @@ public class Enemy : MonoBehaviour,IScoreable
 
             GameObject go = Instantiate(star, gameObject.transform.position, Quaternion.identity);
 
+            go.GetComponent<Star>().OnPickUp += ScoreManager.Get().AddStars;
             Vector2 randForceDir = new Vector2(randForceX,randForceY);
             go.GetComponent<Rigidbody2D>().AddForce(randForceDir, ForceMode2D.Impulse);
         }

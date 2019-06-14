@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Star : MonoBehaviour
+public class Star : MonoBehaviour,IScoreable
 {
     [Header("StarSettings")]
     public Transform target;
@@ -18,13 +18,16 @@ public class Star : MonoBehaviour
     bool isFollowing = false;
     bool canPickUp = false;
 
+    public int score{get;set;}
+
     Vector2 velocity = Vector2.zero;
 
-    ScoreManager sManager;
+    public delegate void OnStarAction(IScoreable star);
+    public event OnStarAction OnPickUp;
 
     private void Awake()
     {
-        sManager = ScoreManager.Get();
+        score = 1;
         screenRatio = (float)Screen.width / (float)Screen.height;
         orthographicWidth = screenRatio * Camera.main.orthographicSize;
     }
@@ -67,11 +70,19 @@ public class Star : MonoBehaviour
         transform.position = Vector2.Lerp(transform.position, target.position, curveSpeed.Evaluate(animSpeed * speed));
     }
 
+    public void OnPickUpAction()
+    {
+        if (OnPickUp != null)
+        {
+            OnPickUp(this);
+        }
+    }
+
     public void Disable()
     {
         if (!IsOutOfRange())
         {
-            sManager.AddStars();
+            OnPickUpAction();
         }
         
         Destroy(gameObject);

@@ -50,9 +50,9 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         }   
     }
 
-    public void AddStars()
+    public void AddStars(IScoreable star)
     {
-        stars++;
+        stars += star.score;
         UIManager.RefreshScoreUI();
     }
 
