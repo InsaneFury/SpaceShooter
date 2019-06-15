@@ -21,7 +21,10 @@ public class Player : MonobehaviourSingleton<Player>
     public int energyPW = 10;
 
     [Header("SkillsSettings")]
+    public GameObject novaText;
     public GameObject nova;
+    public float waitTimeToNova = 10f;
+    float timer = 0f;
 
     Rigidbody2D rb;
     Vector2 moveInput;
@@ -47,6 +50,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Update()
     {
+        timer += Time.deltaTime;
         moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveVelocity = moveInput * speed;
 
@@ -201,7 +205,15 @@ public class Player : MonobehaviourSingleton<Player>
 
     public void Nova()
     {
-        nova.SetActive(true);
+        if (timer > waitTimeToNova)
+        {
+            nova.SetActive(true);
+            timer = 0f;
+        }
+        else
+        {
+            novaText.SetActive(true);
+        }
     }
 
     public void Missile()

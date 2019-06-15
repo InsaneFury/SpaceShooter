@@ -72,7 +72,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DistortionCircle: 1
-    - _DistortionStrength: -1.9640474
+    - _DistortionStrength: -1.9584618
     - _DstBlend: 10
     - _EmissionScaleUI: 0
     - _Glossiness: 0
@@ -92,5 +92,5 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
-    - _MainColor: {r: 0.47245318, g: 0.47245318, b: 0.47245318, a: 1}
-    - _UVOffset: {r: 0, g: -0.3, b: 0, a: -5.549377}
+    - _MainColor: {r: 0.43973762, g: 0.43973762, b: 0.43973762, a: 1}
+    - _UVOffset: {r: 0, g: -0.3, b: 0, a: -19.617424}
