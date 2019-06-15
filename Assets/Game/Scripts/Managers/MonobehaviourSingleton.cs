@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonobehaviourSingleton<T> : MonoBehaviour where T : Component
+public class MonobehaviourSingleton<T> : MonoBehaviour where T : MonobehaviourSingleton<T>
 {
     private static T instance;
+    public bool isPersistant;
 
     public static T Get()
     {
@@ -13,14 +14,20 @@ public class MonobehaviourSingleton<T> : MonoBehaviour where T : Component
 
     public virtual void Awake()
     {
-        if (instance == null)
+
+        if (!instance)
         {
             instance = this as T;
-            return;
         }
         else
         {
-            Destroy(this);
+            Destroy(gameObject);
+            return;
+        }
+        if (isPersistant)
+        {
+            DontDestroyOnLoad(this);
         }
     }
+       
 }

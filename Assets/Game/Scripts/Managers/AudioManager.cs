@@ -11,7 +11,6 @@ public class AudioManager : MonobehaviourSingleton<AudioManager>
 	public override void Awake()
 	{
         base.Awake();
-		DontDestroyOnLoad(gameObject);
 
 		foreach (Sound s in sounds)
 		{

@@ -8,9 +8,7 @@ public class ScenesManager : MonobehaviourSingleton<ScenesManager>
     public override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this);
     }
-
 
     //Scenes Functions
     public void NextScene() {

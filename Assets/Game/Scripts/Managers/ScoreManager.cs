@@ -15,15 +15,22 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     public override void Awake()
     {
         base.Awake();
-        DontDestroyOnLoad(this);
     }
 
     void Start()
     {
-        spawner = EnemySpawner.Get();
-        highScore = PlayerPrefs.GetInt("HighScore");
-        UIManager = UIGameplayManager.Get();
-        UIManager.RefreshScoreUI();
+        Init();
+    }
+
+    private void Update()
+    {
+        if (!UIManager)
+        {
+            spawner = EnemySpawner.Get();
+            highScore = PlayerPrefs.GetInt("HighScore");
+            UIManager = UIGameplayManager.Get();
+            UIManager.RefreshScoreUI();
+        }
     }
 
     public void AddScore(IScoreable e)
@@ -65,5 +72,18 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     public void ResetScore()
     {
         score = 0;
+    }
+
+    public void ResetStars()
+    {
+        stars = 0;
+    }
+
+    private void Init()
+    {
+        spawner = EnemySpawner.Get();
+        highScore = PlayerPrefs.GetInt("HighScore");
+        UIManager = UIGameplayManager.Get();
+        UIManager.RefreshScoreUI();
     }
 }

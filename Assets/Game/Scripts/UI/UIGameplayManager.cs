@@ -25,6 +25,7 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
 
     void Start()
     {
+        
         sManager = ScoreManager.Get();
         player = Player.Get();
     }
@@ -37,9 +38,12 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
 
     public void RefreshScoreUI()
     {
-        scoreText.text = sManager.score.ToString();
-        highScoreText.text = sManager.highScore.ToString();
-        stars.text = sManager.stars.ToString();
+        if (sManager)
+        {
+            scoreText.text = sManager.score.ToString();
+            highScoreText.text = sManager.highScore.ToString();
+            stars.text = sManager.stars.ToString();
+        }
     }
 
 
