@@ -47,7 +47,7 @@ public class GameManager : MonobehaviourSingleton<GameManager>
             Victory();
             isInitialized = false;
         }
-        if (((isLevel01 || isLevel02) && !isInitialized) && !gameOver)
+        if (((isLevel01 || isLevel02) && !isInitialized))
         {
             Init();
         }

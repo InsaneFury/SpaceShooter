@@ -12,7 +12,6 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
     public GameObject energyBar;
     public GameObject blurBG;
     public GameObject blurMenu;
-    public GameObject notEnoughStars;
 
     Player player;
     ScoreManager sManager;
@@ -83,10 +82,5 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
         isBulletTimeOn = false;
         blurBG.SetActive(false);
         blurMenu.SetActive(false);
-    }
-
-    public void NotEnoughStars()
-    {
-        notEnoughStars.SetActive(true);
     }
 }

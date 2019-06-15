@@ -786,7 +786,9 @@ MonoBehaviour:
   epicLaserText: {fileID: 0}
   shield: {fileID: 7451696219556041906}
   energyPW: 10
+  novaText: {fileID: 0}
   nova: {fileID: 7451696219504121956}
+  waitTimeToNova: 10
 --- !u!1 &7451696219848866861
 GameObject:
   m_ObjectHideFlags: 0
