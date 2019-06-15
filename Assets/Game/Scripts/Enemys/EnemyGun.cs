@@ -18,12 +18,14 @@ public class EnemyGun : MonoBehaviour
     public float shootPower = 100f;
     public float fireRate = 2f;
 
+    Enemy enemy;
     float timeToFire = 0f;
 
     AudioManager aManager;
 
     private void Awake()
     {
+        enemy = transform.parent.GetComponent<Enemy>();
         poolDictionary = new Dictionary<string, Queue<GameObject>>();
     }
 
@@ -47,7 +49,7 @@ public class EnemyGun : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Time.time >= timeToFire)
+        if ((Time.time >= timeToFire) && enemy.IsInRange())
         {
             timeToFire = Time.time + 1f / fireRate;
             Shoot();

@@ -176,6 +176,7 @@ public class Player : MonobehaviourSingleton<Player>
         laser.SetActive(false);
         doubleLaser.SetActive(false);
         epicLaser.SetActive(true);
+        
         epicLaserText.SetActive(true);
     }
 

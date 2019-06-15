@@ -15,6 +15,7 @@ TagManager:
   - double_laser
   - nova
   - Canvas
+  - EpicLaserText
   layers:
   - Default
   - TransparentFX

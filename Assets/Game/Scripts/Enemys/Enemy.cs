@@ -41,9 +41,13 @@ public class Enemy : MonoBehaviour,IScoreable
 
     Material mat;
     bool isBlinking = false;
+    float screenRatio;
+    float orthographicWidth;
 
     void Start()
     {
+        screenRatio = (float)Screen.width / (float)Screen.height;
+        orthographicWidth = screenRatio * Camera.main.orthographicSize;
         mat = GetComponent<SpriteRenderer>().material;
         aManager = AudioManager.Get();
         score = (int)Random.Range(100f, 1000f);
@@ -141,5 +145,19 @@ public class Enemy : MonoBehaviour,IScoreable
             Instantiate(powerUps[1], gameObject.transform.position, Quaternion.identity);
         }
 
+    }
+
+    public bool IsInRange()
+    {
+        bool upLimit = transform.position.y > Camera.main.orthographicSize;
+        bool downLimit = transform.position.y < -Camera.main.orthographicSize;
+        bool rightLimit = transform.position.x > orthographicWidth;
+        bool leftLimit = transform.position.x < -orthographicWidth;
+
+        if (upLimit || downLimit || rightLimit || leftLimit)
+        {
+            return false;
+        }
+        return true;
     }
 }
