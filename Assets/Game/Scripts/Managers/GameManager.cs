@@ -11,6 +11,11 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     public bool gameOver = false;
     public bool victory = false;
     public bool isInitialized = false;
+    public int level01Score = 10000;
+    public int level02Score = 20000;
+
+    bool isLevel01;
+    bool isLevel02;
 
     public override void Awake()
     {
@@ -21,6 +26,8 @@ public class GameManager : MonobehaviourSingleton<GameManager>
     {
         Init();
         isInitialized = false;
+        isLevel01 = (sceneM.GetActualScene() == "Level_01");
+        isLevel02 = (sceneM.GetActualScene() == "Level_02");
     }
 
     void Update()
@@ -30,15 +37,21 @@ public class GameManager : MonobehaviourSingleton<GameManager>
             GameOver();
             isInitialized = false;
         }
-        else if ((player.energy > 0 && sManager.score > 10000))
+        else if ((player.energy > 0 && (sManager.score > level01Score)) && isLevel01)
+        {
+            sceneM.LoadScene("Level_02");
+            isInitialized = true;
+        }
+        else if ((player.energy > 0 && (sManager.score > level02Score)) && isLevel02)
         {
             Victory();
             isInitialized = false;
         }
-        if ((sceneM.GetActualScene() == "Level_01") && !isInitialized)
+        if (((isLevel01 || isLevel02) && !isInitialized) && !gameOver)
         {
             Init();
         }
+
     }
 
     void GameOver()

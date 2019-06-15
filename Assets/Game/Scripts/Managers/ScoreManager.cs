@@ -86,4 +86,9 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         UIManager = UIGameplayManager.Get();
         UIManager.RefreshScoreUI();
     }
+
+    public void AddDebugScore(int x)
+    {
+        score += x;
+    }
 }
