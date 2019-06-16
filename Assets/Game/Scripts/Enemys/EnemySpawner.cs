@@ -32,7 +32,14 @@ public class EnemySpawner : MonobehaviourSingleton<EnemySpawner>
         int randEnemy = (int)Random.Range(0f, enemysGO.Count);
 
         GameObject go = Instantiate(enemysGO[randEnemy], RandPos, Quaternion.identity);
-        go.GetComponentInChildren<Enemy>().OnEnemyDie += sManager.AddScore;
+        Enemy[] childsEnemy;
+        childsEnemy = go.GetComponentsInChildren<Enemy>();
+        foreach (Enemy e in childsEnemy)
+        {
+            e.OnEnemyDie += sManager.AddScore;
+            e.OnEnemyDie += sManager.AddDestroyedEnemy;
+        }
+        
     }
 
     void IncreaseSpawnRate()

@@ -56,16 +56,22 @@ public class Enemy : MonoBehaviour,IScoreable
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Laser") && !isBlinking)
+        if (collision.CompareTag("Laser"))
         {
             if (health <= 0)
             {
                 Die();
             }
+
             TakeDamage();
-            isBlinking = true;
-            StartCoroutine("Blink");
+
+            if (!isBlinking)
+            {
+                isBlinking = true;
+                StartCoroutine("Blink");
+            }
         }
+       
 
         switch (collision.tag)
         {

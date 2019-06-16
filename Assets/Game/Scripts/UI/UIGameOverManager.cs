@@ -8,6 +8,7 @@ public class UIGameOverManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI stars;
+    public TextMeshProUGUI destroyedEnemys;
 
     ScoreManager sManager;
 
@@ -24,6 +25,7 @@ public class UIGameOverManager : MonoBehaviour
             scoreText.text = sManager.score.ToString();
             highScoreText.text = sManager.highScore.ToString();
             stars.text = sManager.stars.ToString();
+            destroyedEnemys.text = sManager.destroyedEnemys.ToString();
         }
     }
 }

@@ -26,6 +26,14 @@ public class Player : MonobehaviourSingleton<Player>
     public float waitTimeToNova = 10f;
     float timer = 0f;
 
+    [Header("BlinkSettings")]
+    [Tooltip("Time in seconds")]
+    public float blinkTime = 0.2f;
+    [Tooltip("Value 0f to 1f")]
+    public float blinkAmount = 1f;
+    bool isBlinking = false;
+    Material mat;
+
     Rigidbody2D rb;
     Vector2 moveInput;
     Vector2 moveVelocity;
@@ -39,6 +47,7 @@ public class Player : MonobehaviourSingleton<Player>
 
     void Start()
     {
+        mat = GetComponent<SpriteRenderer>().material;
         playerSize.x = GetComponent<SpriteRenderer>().bounds.extents.x;
         playerSize.y = GetComponent<SpriteRenderer>().bounds.extents.y;
         moveInput = Vector2.zero;
@@ -81,6 +90,12 @@ public class Player : MonobehaviourSingleton<Player>
             if (energy > 0f)
             {
                 TakeDamage();
+            }
+
+            if (!isBlinking)
+            {
+                isBlinking = true;
+                StartCoroutine("Blink");
             }
         }
 
@@ -201,6 +216,10 @@ public class Player : MonobehaviourSingleton<Player>
     public void AddEnergy()
     {
         energy += energyPW;
+        if (energy > 100)
+        {
+            energy = 100;
+        }
     }
 
     public void Nova()
@@ -224,5 +243,13 @@ public class Player : MonobehaviourSingleton<Player>
     public void Ray()
     {
         Debug.Log("Ray");
+    }
+
+    IEnumerator Blink()
+    {
+        mat.SetFloat("_FlashAmount", blinkAmount);
+        yield return new WaitForSeconds(blinkTime);
+        mat.SetFloat("_FlashAmount", 0f);
+        isBlinking = false;
     }
 }

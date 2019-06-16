@@ -8,6 +8,7 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     public int score = 0;
     public int highScore = 0;
     public int stars = 0;
+    public int destroyedEnemys = 0;
 
     EnemySpawner spawner;
     UIGameplayManager UIManager;
@@ -63,6 +64,12 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
         UIManager.RefreshScoreUI();
     }
 
+    public void AddDestroyedEnemy(IScoreable enemy)
+    {
+        destroyedEnemys++;
+        UIManager.RefreshScoreUI();
+    }
+
     public void ResetHighScore()
     {
         PlayerPrefs.SetInt("HighScore", 0);
@@ -77,6 +84,11 @@ public class ScoreManager : MonobehaviourSingleton<ScoreManager>
     public void ResetStars()
     {
         stars = 0;
+    }
+
+    public void ResetEnemys()
+    {
+        destroyedEnemys = 0;
     }
 
     private void Init()

@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 7199888884087278537}
   m_Layer: 0
   m_Name: enemyBlack4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7199888884087278548}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.357, y: 1.827, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
@@ -230,8 +230,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25be5c8da6b80c45a29e0b9758eb4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blinkTime: 0.2
-  blinkAmount: 1
+  health: 10
+  explosion: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
+    type: 3}
+  heatHazeWave: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
+    type: 3}
+  blinkTime: 0.1
+  blinkAmount: 0.5
+  magnitud: 1
+  roughness: 1
+  fadeIn: 0.2
+  fadeOut: 1
+  star: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5, type: 3}
+  powerUps:
+  - {fileID: 5737026370181728797, guid: ca15a8a225054444cb52e30a493bfb81, type: 3}
+  - {fileID: 5019680827172177125, guid: 7653d1711e65da9458f20b0bd6130cc3, type: 3}
+  - {fileID: 5271432379412904185, guid: f00f426fff4b8d647aa48e60d9b30550, type: 3}
+  - {fileID: 7285729553630622346, guid: 51de3cecf60104d40b0f43ed546157af, type: 3}
+  minStarsDrop: 5
+  maxStarsDrop: 20
+  dispersionForce: {x: -2, y: 2}
+  rateOfPowerUpsDrop: 0.1
 --- !u!114 &7199888884087278537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +267,8 @@ MonoBehaviour:
   startWaitTime: 0.2
   point: {fileID: 0}
   enemy: {fileID: 0}
-  stopFollowDistance: 0
-  squadMode: 0
+  stopFollowDistance: 1.2
+  squadMode: 1
 --- !u!1 &7199888885220510345
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,5 +316,5 @@ MonoBehaviour:
   - tag: BadLaser
     prefab: {fileID: 895277215499522981, guid: d546a21f2438e584cbbfc3c19c782700, type: 3}
     size: 10
-  shootPower: 400
-  fireRate: 0.25
+  shootPower: 200
+  fireRate: 0.5

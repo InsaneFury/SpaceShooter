@@ -9,6 +9,7 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI stars;
+    public TextMeshProUGUI destroyedEnemys;
     public GameObject energyBar;
     public GameObject blurBG;
     public GameObject blurMenu;
@@ -43,6 +44,7 @@ public class UIGameplayManager : MonobehaviourSingleton<UIGameplayManager>
             scoreText.text = sManager.score.ToString();
             highScoreText.text = sManager.highScore.ToString();
             stars.text = sManager.stars.ToString();
+            destroyedEnemys.text = sManager.destroyedEnemys.ToString();
         }
     }
 

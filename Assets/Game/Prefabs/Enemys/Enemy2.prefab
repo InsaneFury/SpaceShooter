@@ -200,11 +200,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyBlack4
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -260,93 +255,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: heatHazeWave
-      value: 
-      objectReference: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: blinkTime
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: blinkAmount
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: star
-      value: 
-      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[0]
-      value: 
-      objectReference: {fileID: 5737026370181728797, guid: ca15a8a225054444cb52e30a493bfb81,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[1]
-      value: 
-      objectReference: {fileID: 5019680827172177125, guid: 7653d1711e65da9458f20b0bd6130cc3,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[2]
-      value: 
-      objectReference: {fileID: 5271432379412904185, guid: f00f426fff4b8d647aa48e60d9b30550,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[3]
-      value: 
-      objectReference: {fileID: 7285729553630622346, guid: 51de3cecf60104d40b0f43ed546157af,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
       value: 
       objectReference: {fileID: 3166889789586316716}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: shootPower
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
 --- !u!4 &4901441527483915193 stripped
@@ -442,11 +355,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyBlack4 (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -502,73 +410,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: heatHazeWave
-      value: 
-      objectReference: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: blinkAmount
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: star
-      value: 
-      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[0]
-      value: 
-      objectReference: {fileID: 5737026370181728797, guid: ca15a8a225054444cb52e30a493bfb81,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[1]
-      value: 
-      objectReference: {fileID: 5019680827172177125, guid: 7653d1711e65da9458f20b0bd6130cc3,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[2]
-      value: 
-      objectReference: {fileID: 5271432379412904185, guid: f00f426fff4b8d647aa48e60d9b30550,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[3]
-      value: 
-      objectReference: {fileID: 7285729553630622346, guid: 51de3cecf60104d40b0f43ed546157af,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
@@ -579,26 +420,6 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 3238932108822282977}
-    - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: stopFollowDistance
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: squadMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: shootPower
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
 --- !u!4 &3448957060594013161 stripped
@@ -618,11 +439,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemyBlack4 (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
@@ -679,73 +495,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: heatHazeWave
-      value: 
-      objectReference: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: blinkAmount
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: star
-      value: 
-      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[0]
-      value: 
-      objectReference: {fileID: 5737026370181728797, guid: ca15a8a225054444cb52e30a493bfb81,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[1]
-      value: 
-      objectReference: {fileID: 5019680827172177125, guid: 7653d1711e65da9458f20b0bd6130cc3,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[2]
-      value: 
-      objectReference: {fileID: 5271432379412904185, guid: f00f426fff4b8d647aa48e60d9b30550,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[3]
-      value: 
-      objectReference: {fileID: 7285729553630622346, guid: 51de3cecf60104d40b0f43ed546157af,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
@@ -756,26 +505,6 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 4054324263347135434}
-    - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: stopFollowDistance
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: squadMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: shootPower
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
 --- !u!4 &3238932108822282977 stripped
@@ -871,11 +600,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: enemyBlack4 (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278548, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278539, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -931,73 +655,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: health
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 399312342100935661, guid: e9385c9e5b148c44aaa441b4da959af8,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: heatHazeWave
-      value: 
-      objectReference: {fileID: 8066221439061662295, guid: 982055f0db9a28a44877d98331b6626c,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: blinkAmount
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: star
-      value: 
-      objectReference: {fileID: 5513118581455187952, guid: 954ebc431cdf7d84eb77bf3ef5da5cb5,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[0]
-      value: 
-      objectReference: {fileID: 5737026370181728797, guid: ca15a8a225054444cb52e30a493bfb81,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[1]
-      value: 
-      objectReference: {fileID: 5019680827172177125, guid: 7653d1711e65da9458f20b0bd6130cc3,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[2]
-      value: 
-      objectReference: {fileID: 5271432379412904185, guid: f00f426fff4b8d647aa48e60d9b30550,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: powerUps.Array.data[3]
-      value: 
-      objectReference: {fileID: 7285729553630622346, guid: 51de3cecf60104d40b0f43ed546157af,
-        type: 3}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278536, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: dispersionForce.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
         type: 3}
       propertyPath: point
@@ -1008,26 +665,6 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 4901441527483915193}
-    - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: stopFollowDistance
-      value: 1.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888884087278537, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: squadMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: shootPower
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 7199888885220510351, guid: d6f36df65fad44d4abb33e98ef3dcb28,
-        type: 3}
-      propertyPath: fireRate
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6f36df65fad44d4abb33e98ef3dcb28, type: 3}
 --- !u!4 &4054324263347135434 stripped

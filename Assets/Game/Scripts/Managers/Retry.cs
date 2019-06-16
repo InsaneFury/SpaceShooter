@@ -18,5 +18,6 @@ public class Retry : MonoBehaviour
         gManager.Retry();
         sManager.ResetScore();
         sManager.ResetStars();
+        sManager.ResetEnemys();
     }
 }
